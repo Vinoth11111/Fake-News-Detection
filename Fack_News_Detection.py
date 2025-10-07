@@ -12,4 +12,5 @@ if user_input:
     st.write(user_input)
     # Here you would typically call your fake news detection model
     # For demonstration, we'll just display a placeholder result
+    # here mode output will be displayed.
     st.success("This is a placeholder result. Replace with actual model output.")
