@@ -1,0 +1,26 @@
+# Install virtualenv if you don't have it
+pip install virtualenv
+
+# Create a virtual environment in your project folder
+virtualenv .venv
+
+# Activate the virtual environment
+# For Windows
+.venv\Scripts\activate
+
+# For macOS/Linux
+source .venv/bin/activate
+
+
+#for checking wheather the packages are correctly installed
+pip freeze
+
+# we need to install rust which is requried for tokenizer.
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#restart
+source $HOME/.cargo/env
+#version checking
+rustc --version
+
+# for installing the requried packages.
+pip install -r requirements.txt
