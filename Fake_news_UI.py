@@ -5,7 +5,7 @@ from sentence_transformers import SentenceTransformer
 
 #setting header for the page.
 st.header("Fake News Detection")
-st.image('/Users/vinothkumar/Downloads/fake.png')
+st.image('fake.png')
 
 st.subheader('Enter your news article in the text box below to check if it is real or fake.')
 #creating a text area for user input.
@@ -15,7 +15,7 @@ senetence_model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # creating a function to load the model and embedding matrix.
 def load_model():
-    with open('/Users/vinothkumar/Documents/Fake_News_Detection/model/fake_news_trained_model','rb') as m:
+    with open('model/fake_news_trained_model','rb') as m:
         model = joblib.load(m)
     return model
 trained_model = load_model()
@@ -31,7 +31,6 @@ if user_input:
         x = senetence_model.encode([user_input])
         prediction = trained_model.predict(x)
         st.write(user_input)
-    
     # Here you would typically call your fake news detection model
     # For demonstration, we'll just display a placeholder result
         st.success('The article is Fake' if prediction[0] ==0 else 'The article is Real')

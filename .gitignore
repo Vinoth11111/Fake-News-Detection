@@ -1,2 +1,17 @@
-venv/
-venv/
+#ignore virtual environment folder
+.venv/
+
+#ignoring model file
+model/
+
+#ignore pythonc cache files
+__pycache__/
+*.pyc
+*.pyo
+
+#ignore log files
+*.log
+
+# ignore ide
+.vscode/
+.idea/
